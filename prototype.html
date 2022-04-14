@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+</head>
+<body>
+    <script>
+
+        // Constructor Function
+        function Person(firstName, lastName) {
+            // Agar lebih konsisten code wajib dideklarasikan
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.sayHello = function(name) {
+                console.info(`Hello ${name}, My name is ${this.firstName}`);
+            };
+        };
+
+        Person.prototype.sayBye = function() {
+            console.info('Good Bye');
+        };
+
+        Person.prototype.run = function() {
+            console.info(`${this.firstName} is running`);
+        };
+
+        const rifki = new Person('Rifki', 'Ramadhan');
+        const budi = new Person('Budi', 'Nugraha');
+
+        console.log(rifki);
+        console.log(budi);
+
+        rifki.sayBye();
+        rifki.run();
+
+    </script>
+</body>
+</html>
