@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class: Private Method</title>
+</head>
+<body>
+    
+    <script>
+
+        class Person {
+            say(name) {
+                this.#sayWithName(name);
+            };
+            
+            #sayWithoutName() {
+                this.#sayWithoutName();
+            };
+
+            #sayWithName(name) {
+                console.info(`Hello ${name}`);
+            };
+        };
+
+        const rifki = new Person();
+        rifki.say('Joko');
+
+    </script>
+</body>
+</html>

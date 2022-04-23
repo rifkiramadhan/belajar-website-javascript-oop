@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class: Public Field</title>
+</head>
+<body>
+    
+    <script>
+
+        class Customer {
+            
+            firstName;
+            lastName;
+            balance = 0;
+
+            constructor(firstName, lastName) {
+                this.firstName = firstName;
+                this.lastName = lastName;
+            };
+
+            sayHello() {
+                
+            };
+        };
+
+        const rifki = new Customer('Rifki', 'Ramadhan');
+        console.info(rifki);
+
+    </script>
+</body>
+</html>

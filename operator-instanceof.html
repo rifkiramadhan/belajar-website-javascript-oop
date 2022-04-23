@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Instanceof</title>
+</head>
+<body>
+    
+    <script>
+        class Employee {
+
+        };
+
+        class Manager extends Employee {
+
+        };
+
+        const budi = new Employee();
+        const rifki = new Manager();
+
+        console.info(typeof budi);
+        console.info(typeof rifki);
+
+        console.info(budi instanceof Employee); // True
+        console.info(budi instanceof Manager); // False
+
+        console.info(rifki instanceof Employee); // False
+        console.info(rifki instanceof Manager); // True
+    </script>
+</body>
+</html>
