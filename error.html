@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error</title>
+</head>
+<body>
+    
+    <script>
+
+        class MathUtil {
+            static sum(...numbers) {
+                
+                if (numbers.length == 0) {
+                    // Cara 1
+                    // const error = new Error('Total parameter harus lebih dari 0');
+                    // throw error;
+
+                    // Cara 2
+                    throw Error('Total parameter harus lebih dari 0');
+                }
+                
+                let total = 0;
+                for (const number of numbers) {
+                    total += number;
+                };
+                return total;
+            };
+        };
+
+        console.info(MathUtil.sum());
+        console.info('Rifki');
+
+        const result = MathUtil.sum(1, 1, 1, 1, 1);
+        console.info(result);
+
+    </script>
+</body>
+</html>
